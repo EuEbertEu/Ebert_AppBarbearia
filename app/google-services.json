@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "3928081925",
+    "project_id": "barbearia-e3a90",
+    "storage_bucket": "barbearia-e3a90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3928081925:android:18ba69a6791476182c7e6c",
+        "android_client_info": {
+          "package_name": "com.example.barbershop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1BNuUmC1C3HkSZFBqxJNjugYoR3vSqAE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
