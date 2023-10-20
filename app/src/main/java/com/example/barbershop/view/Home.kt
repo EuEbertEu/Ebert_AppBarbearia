@@ -17,14 +17,13 @@ class Home : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
     private lateinit var servicoAdapter: ServicoAdapter
     private val listaServicos: MutableList<Servicos> = mutableListOf()
-    lateinit var receiver: AirplaneModeChangedReceiver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        receiver = AirplaneModeChangedReceiver()
+
 
         val nome = intent.extras?.getString("nome")
 
@@ -35,16 +34,9 @@ class Home : AppCompatActivity() {
         recyclerViewServicos.setHasFixedSize(true)
         recyclerViewServicos.adapter = servicoAdapter
 
-        IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
-            registerReceiver(receiver, it)
-        }
 
     }
 
-    override fun onStop() {
-        super.onStop()
-        unregisterReceiver(receiver)
-    }() {
 
     }
 
