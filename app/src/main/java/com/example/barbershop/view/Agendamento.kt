@@ -12,8 +12,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import java.util.Calendar
 
 class Agendamento : AppCompatActivity() {
-
-
+    
     private lateinit var binding: ActivityAgendamentoBinding
     private val calendar: Calendar = Calendar.getInstance()
     private var data: String = ""
@@ -67,7 +66,7 @@ class Agendamento : AppCompatActivity() {
             val barbeiro3 = binding.barbeiro3
 
             when{
-                hora.isEmpty() ->{
+                hora.isEmpty() -> {
                     mensagem(it, "Preencha o horário!", "#FF0000")
                 }
                 hora < "8:00" && hora > "19:00" -> {
@@ -76,13 +75,13 @@ class Agendamento : AppCompatActivity() {
                 data.isEmpty() -> {
                     mensagem(it, "Coloque uma data!", "#FF0000")
                 }
-                barbeiro1.isChecked && data.isNotEmpty() && hora.isNotEmpty() ->{
+                barbeiro1.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
                     salvarAgendamento(it, nome, "Kauã Ricardo",data,hora)
                 }
-                barbeiro2.isChecked && data.isNotEmpty() && hora.isNotEmpty() ->{
+                barbeiro2.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
                     salvarAgendamento(it, nome, "Getúlio Armando",data,hora)
                 }
-                barbeiro3.isChecked && data.isNotEmpty() && hora.isNotEmpty() ->{
+                barbeiro3.isChecked && data.isNotEmpty() && hora.isNotEmpty() -> {
                     salvarAgendamento(it, nome, "Adailton Guedes",data,hora)
                 }
                 else -> {
@@ -92,12 +91,13 @@ class Agendamento : AppCompatActivity() {
         }
     }
     private fun mensagem(view: View, mensagem: String, cor: String){
-        val snackbar = Snackbar.make(view, mensagem, Snackbar.LENGTH_SHORT)
+        val snackbar = Snackbar.make(view, mensagem,Snackbar.LENGTH_SHORT)
         snackbar.setBackgroundTint(Color.parseColor(cor))
         snackbar.setTextColor(Color.parseColor("FFFFFF"))
         snackbar.show()
     }
     private fun salvarAgendamento(view: View, cliente: String, barbeiro: String, data: String, hora: String){
+
         val db = FirebaseFirestore.getInstance()
 
 

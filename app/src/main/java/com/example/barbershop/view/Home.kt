@@ -24,7 +24,7 @@ class Home : AppCompatActivity() {
         setContentView(binding.root)
 
 
-
+        supportActionBar?.hide()
         val nome = intent.extras?.getString("nome")
 
         binding.txtNomeUser.text = "Bem-vindo, $nome"
@@ -33,11 +33,13 @@ class Home : AppCompatActivity() {
         servicoAdapter = ServicoAdapter(this, listaServicos)
         recyclerViewServicos.setHasFixedSize(true)
         recyclerViewServicos.adapter = servicoAdapter
+        getServico()
 
-
-    }
-
-
+        binding.btAgenda.setOnClickListener {
+            val intent = Intent(this, Agendamento::class.java)
+            intent.putExtra("nome", nome)
+            startActivity(intent)
+        }
     }
 
     private fun getServico(){

@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     private fun mensagem(view: View, mensagem: String){
         val snackbar = Snackbar.make(view,mensagem,Snackbar.LENGTH_SHORT)
         snackbar.setBackgroundTint(Color.parseColor("#FF0000"))
