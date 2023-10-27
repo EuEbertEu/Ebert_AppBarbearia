@@ -5,6 +5,7 @@ import android.content.IntentFilter
 import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.barbershop.R
@@ -40,6 +41,11 @@ class Home : AppCompatActivity() {
             intent.putExtra("nome", nome)
             startActivity(intent)
         }
+        binding.iconMenu.setOnClickListener {
+            val intent2 = Intent(this, Menu::class.java)
+            startActivity(intent2)
+        }
+
     }
 
     private fun getServico(){
@@ -56,4 +62,6 @@ class Home : AppCompatActivity() {
         val servico4 = Servicos(R.drawable.img4, "Tratamento de cabelo")
         listaServicos.add(servico4)
     }
+
+
 }

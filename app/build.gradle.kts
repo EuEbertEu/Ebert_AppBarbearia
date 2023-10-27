@@ -53,5 +53,7 @@ dependencies {
     implementation ("com.google.firebase:firebase-firestore-ktx")
 
     implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
+
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 }
 

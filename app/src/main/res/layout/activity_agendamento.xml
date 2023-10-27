@@ -171,7 +171,5 @@
         android:backgroundTint="@color/red"
         android:layout_margin="40dp"/>
 
-
-
 </LinearLayout>
 </ScrollView>

@@ -6,4 +6,6 @@
     <color name="blue">#0111DB</color>
     <color name="midnight">#2C3E50</color>
     <color name="grey">#808080</color>
+    <color name="underLine">#BDB8B8</color>
+
 </resources>
