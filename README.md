@@ -1,5 +1,5 @@
 # Ebert_AppBarbearia
-Projeto de um aplicativo de barbearia feito em Java.  
+Projeto de um aplicativo de barbearia feito em Kotlin.  
 > Status: Ideia em desenvolvimento ⚠️
 
 ### Objetivo
